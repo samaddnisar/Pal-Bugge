@@ -2,26 +2,68 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-fjalla), sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  scroll-behavior: smooth;
+}
+
+.nice {
+  font-size: clamp(80px, 17vw, 15rem) !important;
+  line-height: 0.9 !important;
+}
+
+.main-heading {
+  font-size: 8rem !important; /* Default (small screens) */
+  line-height: 0.9;
+}
+
+@media (min-width: 768px) {
+  /* md */
+  .main-heading {
+    font-size: 10rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* lg */
+  .main-heading {
+    font-size: 12rem !important;
+  }
+}
+
+@media (min-width: 1280px) {
+  /* xl */
+  .main-heading {
+    font-size: 15rem !important;
   }
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-satoshi), sans-serif;
+  @apply bg-darkest text-light;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+.horizontally-center {
+  @apply absolute left-1/2 -translate-x-1/2;
+}
+
+.vertically-center {
+  @apply absolute top-1/2 -translate-y-1/2;
+}
+
+@keyframes rotate-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
