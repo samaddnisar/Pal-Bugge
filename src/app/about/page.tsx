@@ -36,7 +36,7 @@ const page = () => {
           />
         </div>
         <Heading className="mt-8 max-w-[55rem] leading-tight">
-          Haagenrud's Dynamic Portfolio
+          {"Haagenrud's Dynamic Portfolio"}
         </Heading>
         <Paragraph className="max-w-[65rem]">
           He has also contributed as the cinematographer for season 3 of the

@@ -46,11 +46,3 @@ const page = () => {
 };
 
 export default page;
-
-const PalBugge = () => {
-  return (
-    <div className="relative">
-      <img src="/images/pal.png" alt="Pal Bugge" />
-    </div>
-  );
-};
